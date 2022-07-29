@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades CSS</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <header> <!--Sección superior del Sitio-->
+            <picture class="logo">
+                <img src="../img/Logo-html5.png" alt="Logo HTML5" width="50px" height="50px">
+            </picture>
+
+            <h1>DESARROLLO WEB</h1>
+            <h2>Introducción a HTML5</h2>       
+        </header>
+
+        <nav class="nav">  <!--Barra de navegación del sitio-->
+            <ul class="nav_list">
+                <li> <a href="../index.html" target="_blank">INICIO</a></li>
+                <li> <a href="../pages/elementos.html" target="_blank">ELEMENTOS</a></li>
+                <li> <a href="../pages/atributos.html" target="_blank">ATRIBUTOS</a></li>
+                <li> <a href="#">CSS</a></li>
+            </ul>
+        </nav>
+        
+        <main> <!--Contenido sobre el tema Propiedades CSS-->
+            <h2>Propiedades CSS</h2>
+            <table> <!--Tabla de Propiedades CSS-->
+                <thead>  <!--Encabezados de la tabla-->
+                    <tr>
+                        <th>No</th>
+                        <th>Propiedades</th>
+                        <th>Definición</th>
+                    </tr>
+                </thead>
+                
+                <tbody> <!--Cuerpo o contenido de la tabla-->
+                    <tr>
+                        <td>01</td>
+                        <td> <i>Propiedades de Background</i> </td>
+                        <td>
+                            <b>background</b> = Atajo para el resto de propiedades. <br>
+                            <b>background-color</b> = Define el color del fondo. <br>
+                            <b>background-image</b> = Establece una o mas imagenes como fondo. <br>
+                            <b>background-size</b> = Especifica el tamaño de las imagenes de fondo. <br>
+                            <b>background-position</b> = Define la posicion inicial de la imagen de fondo. <br>
+                            <b>background-repeat</b> = Define como se repite el background, horizontal, vertical o no repetirse.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td> <i>Propiedades de Border</i> </td>
+                        <td>
+                            <b>border</b> = Define los valores color, style y width de todos los bordes. <br>
+                            <b>border-collapse</b> = Fusiona o separa (default) bordes. <br>
+                            <b>border-color</b> = Define el color de los 4 bordes. <br>
+                            <b>border-style</b> = Define el estilo de línea para los 4 bordes. <br>
+                            <b>border-width</b> = Define el ancho de los 4 bordes. <br>
+                            <b>border-|lado|</b> = Define las propiedades color, style y width para el lado seleccionado.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>03</td>
+                        <td>margin</td>
+                        <td>
+                            <b>margin</b> = Establece el margen para los cuatro lados. <br>
+                            <b>margin-|lado|</b> = Establece el margen para el lado seleccionado.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>04</td>
+                        <td>padding</td>
+                        <td>
+                            <b>padding</b> = Establece el padding para los 4 lados. <br>
+                            <b>padding-|lado|</b> = establece el padding para el lado seleccionado.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>05</td>
+                        <td>width</td>
+                        <td>
+                            <b>width</b> = Establece el ancho del área de contenido de un elemento. <br>
+                            <b>min-width</b> = Determina la anchura mínima que debe tener el elemento. <br>
+                            <b>max-width</b> = Determina la anchura máxima que debe tener el elemento.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>06</td>
+                        <td>height</td>
+                        <td>
+                            <b>height</b> = Establece la altura del área de contenido de un elemento. <br>
+                            <b>min-height</b> = Determina la altura mínima que debe tener el elemento. <br>
+                            <b>max-height</b> = Determina la altura máxima que debe tener el elemento.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>07</td>
+                        <td>overflow</td>
+                        <td>
+                            <b>overflow</b> = Especifica si recortar contenido, dibujar barras de desplazamiento o 
+                            mostrar el contenido excedente en un elemento a nivel de bloque. <br>
+                            <b>overflow-wrap</b> = Especifica si el navegador puede o no romper una palabra
+                            en más líeas si esta es demasiado larga y se sale del contenedor. <br>
+                            <b>overflow-x</b> = Establece que se mostrara si el contenido se desborda
+                            por los extremos laterales del elemento. Puede ser un scroll, contenido o nada. <br>
+                            <b>overflow-y</b> = Establece que se mostrara si el contenido se desborda 
+                            por los extremos superior e inferior del elemento. Puede ser un scroll, contenido o nada.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>08</td>
+                        <td>float</td>
+                        <td>Ubica el elemento al lado izquierdo o derecho de su contenedor, permitiendo a elementos inline y texto aparecer a su costado.</td>
+                    </tr>
+                    <tr>
+                        <td>09</td>
+                        <td>visibility</td>
+                        <td>
+                            Especifica si el elemento sera visible o no <br>
+                            <b>Nota:</b> hidden solo lo oculta, pero aun ocupa espacio en pantalla.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>font</td>
+                        <td>Especifica en una sola línea los valores de font-style, font-variant, font-weight, font-size y font-family.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div> 
+</body>
+
+</html>

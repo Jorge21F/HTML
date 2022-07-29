@@ -1,0 +1,278 @@
+html { 
+    background-color: gray; 
+}
+
+/* cambia el estilo al seleccionar texto con el mouse */
+::selection {
+    color: yellow; background: black; 
+}
+
+/* Contenedor para especificar en que orden se mostrara la página */
+.contenedor {
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "nav"        
+        "main"
+        "footer"
+    ;
+}
+
+/* Estilos para el header */
+header {
+    /* Reservar su area, alinear texto y cambiarle color, background estilo gradient */
+    grid-area: header;
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(to right, blue, red);
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    /* Reservar area y darle un background */
+    grid-area: nav;
+    background-color: gold;
+}
+
+nav ul {
+    /* Muestra la lista en una sola linea, separada y sin viñetas */
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+nav ul a {
+    /* Quita el subrayado y da color a las anclas */
+    text-decoration: none;
+    color: crimson;
+}
+
+/* Estilos para cuando se coloca el mouse encima de un ancla en la barra de navegacióm */
+nav ul a:hover { 
+    /* Cambia color de la letra y muestra un background y contrno rojo, simulando un boton. */
+    background-color: red; 
+    outline: 10px groove red;
+    color: white;
+}
+
+/* Estilos para el main */
+main {
+    /* Reserva su area, cambia color al texto y utiliza un background gradient */
+    grid-area: main;
+    background-image: linear-gradient(to left, #af80f0, #4e0ba5);
+    color: white;
+    padding: 20px;
+}
+
+/* Estilos para las anclas en el apartado de anexos (aside) */
+.mainGrid_aside ol a { 
+    /*  Cambia el color de la letra y quizael subrayado */
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilos al pasar el mouse sobre un ancla en el aside */
+.mainGrid_aside ol a:hover {
+    /* Cambia el background */
+    background-color: red;
+}
+
+/* Estilos para el footer */
+footer {
+    /* Da un padding, background y cambia color de texto */
+    padding: 3px;
+    background-color: black;
+    color: white;
+    
+    /* Reserva su area */
+    grid-area: footer;
+    
+    /* Establece que su area tambien sera un grid */
+    display: grid;
+    /* En su grid se presentaran los elementos en dos columnas para que ocupen una sola linea */
+    grid-template-areas: "f_left f_right";
+}
+
+/* Reserva su espacio en el grid de footer */
+.f_left { 
+    grid-area: f_left; 
+}
+
+/* Reserva su espacio en el grid de footer y envia el texto al final de línea */
+.f_right { 
+    grid-area: f_right;
+    text-align: end;
+}
+
+/* Cambia la position del logo */
+.logo {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+/* Estilos para las tablas */
+table, th, td {
+    /* Da un borde negro de 1px */
+    border: 1px solid black;
+    /* Fusiona los bordes para que no se genere un efecto doble */
+    border-collapse: collapse;
+    /* Cambia los bordes inferiores para que sean mas gruesos */
+    border-bottom: 3px solid black;
+    /* Controla el overflow en horizontal */
+    overflow-x: auto;
+}
+
+/* Estilos para celda de datos */
+td { 
+    /* Da un padding para separarse un poco de los bordes */
+    padding: 7px;
+}
+
+/* Centra el texto de la primera columna de las tablas */
+tr td:first-child {
+    text-align: center;
+}
+
+/* Efecto zebra para las tablas */
+tr:nth-child(even) { 
+    /* A las filas pares darle color Lime */
+    background-color: lime; 
+    color: black;
+}
+
+tr:nth-child(odd) { 
+    /* A las filas impares darle color Cyan */
+    background-color: cyan;
+    color: black
+}
+
+/* Estilos para la fila de encabezado */
+th {
+    background-color: black; 
+    color: crimson;
+}
+
+/* Al pasar el mouse sobre una fila, esta cambiara de color */
+tr:hover { 
+    background-color: yellow; 
+}
+
+
+/* MEDIA QUERIES */
+
+/* Estilos para tamaños mayores a 768px */
+@media screen and (min-width: 768px) 
+{
+    /* Contenedor para especificar en que orden se mostrara la página */
+    .contenedor {
+        display: grid;
+        grid-template-areas: 
+           "header" 
+           "nav" 
+           "main" 
+           "footer"
+        ;
+    }
+
+    /* Configurando el area del main para dividrla */
+    .mainGrid {
+        /* Establece que el area de main tambien sera un grid */
+        display: grid;
+        /* El contenido se presentara en dos columnas */
+        grid-template-areas: "section aside";
+    }
+
+    .mainGrid_section {
+        /* Reserva su espacio en el grid de main */
+        grid-area: section;
+    }
+    
+    .mainGrid_aside {
+        /* Reserva su espacio en el grid de main */
+        grid-area: aside;
+    }
+
+    /* Centra las tablas */
+    table {
+        margin: 0 auto;
+    }
+
+    /* Centra los titulos de nivel 2 */
+    h2 {
+        text-align: center;
+    }
+
+    /* Efecto zebra para las tablas */
+    /* En este caso los colores se intercambian respecto al tamaño anterior */
+    tr:nth-child(odd) { 
+        /* A las filas impares darle color Lime */
+        background-color: lime; 
+        color: black;
+    }
+
+    tr:nth-child(even) { 
+        /* A las filas pares darle color Cyan */
+        background-color: cyan;
+        color: black
+    }
+}
+
+/* Estilos para tamaños mayores a 992px */
+@media screen and (min-width: 992px) 
+{
+    /* Contenedor para especificar en que orden se mostrara la página */
+    .contenedor 
+    {
+        display: grid;
+        grid-template-areas: 
+           "header" 
+           "nav" 
+           "main" 
+           "footer"
+        ;
+    }
+
+    /* Configurando el area del main para dividrla */
+    .mainGrid {
+        /* Establece que el area de main tambien sera un grid */
+        display: grid;
+        /* El contenido se presentara en dos columnas */
+        grid-template-areas: "section aside";
+    }
+
+    .mainGrid_section {
+        /* Reserva su espacio en el grid de main */
+        grid-area: section;
+    }
+
+    .mainGrid_aside {
+        /* Reserva su espacio en el grid de main */
+        grid-area: aside;
+    }
+
+
+     /* Centra las tablas */
+    table {
+        margin: 0 auto;
+    }
+
+    /* Centra los titulos de nivel 2 */
+    h2 {
+        text-align: center;
+    }
+
+    /* Efecto zebra para las tablas */
+    /* Los colores se vuelven a intercambiar, regresando al estilo inicial */
+    tr:nth-child(even) { 
+        /* A las filas pares darle color Lime */
+        background-color: lime; 
+        color: black;
+    }
+
+    tr:nth-child(odd) { 
+        /* A las filas impares darle color Cyan */
+        background-color: cyan;
+        color: black
+    }
+}
