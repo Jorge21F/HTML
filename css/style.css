@@ -154,7 +154,7 @@ th {
 }
 
 /* Al pasar el mouse sobre una fila, esta cambiara de color */
-tr:hover { 
+table tr:hover { 
     background-color: yellow; 
 }
 
@@ -162,6 +162,7 @@ tr:hover {
 /* MEDIA QUERIES */
 
 /* Estilos para tamaños mayores a 768px */
+/* Divide la seccion principal entre el contenido y el aside e intercambia colores de las tablas*/
 @media screen and (min-width: 768px) 
 {
     /* Contenedor para especificar en que orden se mostrara la página */
@@ -198,11 +199,6 @@ tr:hover {
         margin: 0 auto;
     }
 
-    /* Centra los titulos de nivel 2 */
-    h2 {
-        text-align: center;
-    }
-
     /* Efecto zebra para las tablas */
     /* En este caso los colores se intercambian respecto al tamaño anterior */
     tr:nth-child(odd) { 
@@ -219,6 +215,8 @@ tr:hover {
 }
 
 /* Estilos para tamaños mayores a 992px */
+/* Divide la seccion principal entre el contenido y el aside */
+/* Vuelve a cambiar los colores de las tablas y centra los titulos nivel 2 */
 @media screen and (min-width: 992px) 
 {
     /* Contenedor para especificar en que orden se mostrara la página */
